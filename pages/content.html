@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Education</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link rel="stylesheet" href="../Css/tailwind.css" type="text/css">
+	<link rel="stylesheet" href="../Css/style.css" type="text/css">
+
+</head>
+
+<body class="content-body">
+
+	<nav class="content_navbar navbar navbar-expand-lg sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand " href="#">Name</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation" style="background-color: white; color: blue">
+				<span class="navbar-toggler-icon nti"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+				<ul class="navbar-nav mb-2 mb-lg-0 ">
+					<li class="nav-item d-flex">
+						<b> <a class="content_nav_link nav-link" aria-current="page" href="../home.html">Home</a></b>
+					</li>
+					<li class="nav-item d-flex">
+						<b><a class="content_nav_link nav-link" aria-current="page" href="../pages/aboutUs.html">About
+								us</a></b>
+					</li>
+					<li class="nav-item d-flex">
+						<b><a class="content_nav_link nav-link" aria-current="page"
+								href="../pages/contactUs.html">Contact us</a></b>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- compiler mobile -->
+	<div class="compilerBtnClass">
+		<svg id="compilerBtn" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+			class="bi bi-file-code-fill" viewBox="0 0 16 16" onclick="compilerEnable();">
+			<path
+				d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6.646 5.646a.5.5 0 1 1 .708.708L5.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 1 1 .708-.708z" />
+		</svg>
+	</div>
+	<div class="content-main-compiler compiler_mobile bg-green-300	">
+		<div>
+			<label for="language">Select a Programming Language:</label>
+			<select name="language" id="language">
+				<option value="python">Python</option>
+				<option value="python3">Python 3</option>
+				<option value="java">Java</option>
+				<option value="javascript">Javascript</option>
+				<option value="c">C</option>
+				<option value="cpp">C++</option>
+				<option value="csharp">C#</option>
+				<option value="go">Go</option>
+			</select>
+			<button id="compilerCloseBtn" onclick="closeCompiler();">Close</button>
+		</div>
+
+		<div class="code">
+			<label for="source_code">Type Source Code: </label>
+			<textarea id="source_code" name="source_code"></textarea>
+		</div>
+
+		<div class="output">
+			<h2>Output: </h2>
+			<div id="preview"></div>
+		</div>
+
+		<button class="btn btn-primary" id="submit">Submit</button>
+	</div>
+	</div>
+	<!-- ----------- -->
+	<div class="split content  ">
+		<!-- <div class="grid md:grid-cols-3  sm:grid-rows-6  content"> -->
+		<div class=" btn-group dn1 ">
+			<button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1"
+				data-bs-toggle="dropdown" aria-expanded="false">
+				Topics
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" ">
+				<li><a class=" dropdown-item" href="#">HTML</a></li>
+				<li><a class="dropdown-item" href="#">JS</a></li>
+				<li><a class="dropdown-item" href="#">CSS</a></li>
+			</ul>
+
+
+		</div>
+		<div class=" flex-20  bg-green-300  con-main-topic ">
+			<div class="dn ">Topics</div>
+			<ul class="main-topic-lg">
+				<li>
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Dropdown button
+						</button>
+						<ul class="dropdown-menu relative" aria-labelledby="dropdownMenuButton1">
+							<li><a class="dropdown-item" href="#">Another</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a class="dropdown-item" href="#">JS</a></li>
+				<li><a class="dropdown-item" href="#">CSS</a></li>
+			</ul>
+		</div>
+		<div class="content-main flex-60 flex-grow ">Main Content</div>
+		<div class="content-main-compiler compiler flex-20 p-16p-16 bg-green-300 flow-content">
+			<div>
+				<label for="language">Select a Programming Language:</label>
+
+				<select name="language" id="language">
+					<option value="python">Python</option>
+					<option value="python3">Python 3</option>
+					<option value="java">Java</option>
+					<option value="javascript">Javascript</option>
+					<option value="c">C</option>
+					<option value="cpp">C++</option>
+					<option value="csharp">C#</option>
+					<option value="go">Go</option>
+				</select>
+			</div>
+
+			<div class="code">
+				<label for="source_code">Type Source Code: </label>
+				<textarea id="source_code" name="source_code"></textarea>
+			</div>
+
+			<div class="output">
+				<h2>Output: </h2>
+				<div id="preview"></div>
+			</div>
+
+			<button class="btn btn-primary" id="submit" onclick="fetchOutput();">Submit</button>
+		</div>
+	</div>
+
+
+	<footer>
+		<ul class="flex bg-indigo-200 justify-evenly items-center">
+			<li><a href="#">Twitter</a></li>
+			<li><a href="#">Instagram</a></li>
+			<li><a href="#">sdf</a></li>
+		</ul>
+	</footer>
+
+	<!-- Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+
+	<!-- Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<script src="/js/script.js"></script>
+
+</body>
+
+</html>
